@@ -19,27 +19,28 @@ public class Test02 {
         two = a[0];
     }
 
-    if(a[2] >= one) {
-      three = two;
-      two = one;
-      one = a[2];
-    } else if(a[2] < two && a[2] < one) {
-      three = a[2];
-    } else if(a[2] < one && a[2] >= two) {
-      three = two;
-      two = a[2];
+    if(a[2] >= a[3]) {
+        three = a[2];
+        foo = a[3];
+    }else {
+        three = a[3];
+        foo = a[2];
     }
 
-    if(a[3] >= one) {
-      foo = three;
-      three = two;
-      two = one;
-      one = a[3];
-    } else if(a[3] < two && a[3] < one) {
-      three = a[2];
-    } else if(a[2] < one && a[2] >= two) {
-      three = two;
-      two = a[2];
-    } else if(a[3] )
+    //System.out.println(one + two + three + foo);
+
+    if(one >= three) {
+      if(two >= three) {
+        System.out.println(two);
+      } else {
+        System.out.println(three);
+      }
+    } else {
+      if(one >= foo) {
+        System.out.println(one);
+      } else {
+        System.out.println(foo);
+      }
+    }
   }
 }
